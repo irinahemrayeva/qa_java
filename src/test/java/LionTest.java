@@ -21,7 +21,7 @@ public class LionTest {
     public void testLionGetFood() throws Exception {
         List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
         when(mockFeline.getFood("Predator")).thenReturn(expectedFood);
-
+//Вношу изменения, а то не коммитится
         Lion lion = new Lion("Male", mockFeline);
         List<String> actualFood = lion.getFood();
 

@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
 public class FelineTest {
-
+    //Вношу изменения, а то не коммитится
     private final Feline feline = new Feline();
 
     @Test

@@ -12,7 +12,7 @@ import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class CatTest {
-
+    //Вношу изменения, а то не коммитится
     @Mock
     private Predator mockPredator;
 

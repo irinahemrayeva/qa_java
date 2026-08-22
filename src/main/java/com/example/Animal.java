@@ -4,6 +4,8 @@ import java.util.List;
 
 public class Animal {
 
+    //Вношу изменения, а то не коммитится
+
     public List<String> getFood(String animalKind) throws Exception {
         if ("Herbivore".equals(animalKind)) {
             return List.of("Grass", "Plants");

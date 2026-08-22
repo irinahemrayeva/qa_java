@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class FelineParameterizedTest {
-
+    //Вношу изменения, а то не коммитится
     private final String animalKind;
     private final List<String> expectedFood;
 
