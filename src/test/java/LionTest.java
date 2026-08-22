@@ -1,5 +1,6 @@
 import com.example.Feline;
 import com.example.Lion;
+import com.example.Predator;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -21,7 +22,7 @@ public class LionTest {
     public void testLionGetFood() throws Exception {
         List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
         when(mockFeline.getFood("Predator")).thenReturn(expectedFood);
-//Вношу изменения, а то не коммитится
+
         Lion lion = new Lion("Male", mockFeline);
         List<String> actualFood = lion.getFood();
 
@@ -30,11 +31,25 @@ public class LionTest {
     }
 
     @Test
-    public void testLionGetKittens() throws Exception {
+    public void testLionGetFoodCallsGetFood() throws Exception {
+        Lion lion = new Lion("Male", mockFeline);
+        lion.getFood();
+        verify(mockFeline).getFood("Predator");
+    }
+
+    @Test
+    public void testLionGetKittensReturnsCorrectCount() throws Exception {
         when(mockFeline.getKittens()).thenReturn(5);
 
         Lion lion = new Lion("Male", mockFeline);
         assertEquals(5, lion.getKittens());
+
+    }
+
+    @Test
+    public void testLionGetKittensCallsGetKittens() throws Exception {
+        Lion lion = new Lion("Male", mockFeline);
+        lion.getKittens();
         verify(mockFeline).getKittens();
     }
 

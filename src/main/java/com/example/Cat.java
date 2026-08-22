@@ -3,7 +3,7 @@ package com.example;
 import java.util.List;
 
 public class Cat {
-    //Вношу изменения, а то не коммитится
+
     Predator predator;
 
     public Cat(Predator predator) {

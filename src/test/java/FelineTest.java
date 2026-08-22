@@ -1,17 +1,9 @@
 import com.example.Feline;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
-
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThrows;
-
 public class FelineTest {
-    //Вношу изменения, а то не коммитится
+
     private final Feline feline = new Feline();
 
     @Test

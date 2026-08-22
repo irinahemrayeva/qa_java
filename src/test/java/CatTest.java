@@ -12,7 +12,7 @@ import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class CatTest {
-    //Вношу изменения, а то не коммитится
+
     @Mock
     private Predator mockPredator;
 
@@ -25,6 +25,13 @@ public class CatTest {
         List<String> actualFood = cat.getFood();
 
         assertEquals(expectedFood, actualFood);
+    }
+
+    @Test
+    public void testCatGetFoodCallsEatMeat() throws Exception {
+        Cat cat = new Cat(mockPredator);
+        cat.getFood();
+
         verify(mockPredator, times(1)).eatMeat();
     }
 

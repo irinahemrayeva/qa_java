@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class LionParameterizedTest {
-    //Вношу изменения, а то не коммитится
+
     private final String sex;
     private final boolean expectedHasMane;
 
